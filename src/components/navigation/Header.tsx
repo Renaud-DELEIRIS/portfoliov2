@@ -26,24 +26,26 @@ const Header = () => {
           <span className="text-sm text-gray italic whitespace-nowrap">{t`description`}</span>
         </div>
       </div>
-      <a
-        href="#projects"
-        className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
-      >
-        {t`project`}
-      </a>
-      <a
-        href="#projects"
-        className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
-      >
-        {t`work`}
-      </a>
-      <a
-        href="#projects"
-        className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
-      >
-        {t`contact`}
-      </a>
+      <div className="row items-center gap-4 hidden sm:flex">
+        <a
+          href="#projects"
+          className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
+        >
+          {t`project`}
+        </a>
+        <a
+          href="#projects"
+          className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
+        >
+          {t`work`}
+        </a>
+        <a
+          href="#projects"
+          className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
+        >
+          {t`contact`}
+        </a>
+      </div>
       <div className="ml-auto">
         <div className="row gap-1 text-xl items-center ">
           <Link href="#" locale="en">

@@ -21,7 +21,7 @@ export default function Projects() {
   return (
     <div className="row w-full">
       <div
-        className={`col w-4/5 md:w-[83%] lg:w-[87%] xl:w-11/12 bg-color-2 h-[55vh] md:h-[65vh] p-4 ${style.wrapper} shadow dark:shadow-neutral-700`}
+        className={`col w-4/5 md:w-[83%] lg:w-[87%] xl:w-11/12 bg-color-2 p-4 ${style.wrapper} shadow dark:shadow-neutral-700`}
       >
         <h3 className="text-2xl text-primary-2">
           {projects[activeProject].category}

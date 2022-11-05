@@ -1,6 +1,7 @@
 import style from "@styles/main.module.css";
 import { IconArrowDown, IconArrowRight } from "@tabler/icons";
 import { initMouseTrails, removeMouseTrails } from "@utils/mouseTrails";
+import { destroyStars, initStars } from "@utils/stars";
 import { useTranslation } from "next-i18next";
 import React, { useEffect } from "react";
 
@@ -20,11 +21,15 @@ export default function MainSection() {
       }
     }
     initMouseTrails(ref.current);
-    return () => removeMouseTrails(ref.current);
+    initStars(ref.current);
+    return () => {
+      removeMouseTrails(ref.current);
+      destroyStars(ref.current);
+    };
   }, [ref]);
   return (
     <section
-      className="w-full h-screen pt-[300px] py-8 relative overflow-x-hidden"
+      className="w-full h-screen pt-[calc(80px+15vh)] py-8 relative overflow-x-hidden"
       ref={ref}
     >
       <div className="row px-4 relative md:px-12 z-10">
@@ -46,14 +51,14 @@ export default function MainSection() {
           <span className="text-gray text-sm mt-2 italic">{t`job.explain`}</span>
         </h1>
         <img
-          className={`${style.logo} dark:translate-x-[-11rem] dark:translate-y-[-9rem] dark:md:translate-x-[-17rem] dark:md:translate-y-[-11rem]`}
+          className={`${style.logo} dark:translate-x-[-11rem] dark:translate-y-[-6.5rem] dark:md:translate-x-[-17rem] dark:md:translate-y-[-6rem]`}
           src="/images/moon.svg"
           alt="Moon"
         />
         <img
-          className={`${style.logo} translate-x-[-11rem] translate-y-[-9rem] md:translate-x-[-17rem] md:translate-y-[-11rem] dark:translate-x-0 dark:translate-y-0`}
+          className={`${style.logo} translate-x-[-11rem] translate-y-[-6.5rem] md:translate-x-[-17rem] md:translate-y-[-6rem] dark:translate-x-0 dark:translate-y-0`}
           src="/images/sun.svg"
-          alt="Moon"
+          alt="Sun"
         />
         <img
           className={`${style.compagnion} hidden dark:block`}

@@ -9,8 +9,8 @@ export default function ProjectSection() {
   const { t } = useTranslation("project");
 
   return (
-    <section className="w-full h-screen md:pb-8 pt-24 relative overflow-x-hidden">
-      <div className="row px-4 relative md:px-12 min-h-[15vh]">
+    <section className="w-full pb-8 pt-24 relative overflow-x-hidden">
+      <div className="row px-4 relative md:px-12 ">
         <h2 className="col text-4xl md:text-6xl font-bold text-color-1">
           <span className="text-primary-1">{t`title`},</span>
           <p className="text-base mt-8 font-normal pl-4">
