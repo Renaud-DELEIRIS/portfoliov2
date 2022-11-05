@@ -1,0 +1,10 @@
+{
+    "description": "Web Development",
+    "project": "Projects",
+    "work": "Works",
+    "contact": "Contact",
+    "language": {
+        "fr": "French",
+        "en": "English"
+    }
+}

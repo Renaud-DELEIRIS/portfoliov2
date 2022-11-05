@@ -1,16 +1,28 @@
+import Header from "@components/navigation/Header";
+import MainSection from "@components/sections/MainSection";
+import ProjectSection from "@components/sections/ProjectSection";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React from "react";
 
-import { Container, Header, Main, Footer, Cards } from "@components";
-
 const Home: React.FC = () => {
-    return (
-        <Container>
-            <Header />
-            <Main />
-            <Cards />
-            <Footer />
-        </Container>
-    );
+  const { t } = useTranslation("common");
+  return (
+    <main className="bg-color-1 transition-colors duration-500">
+      <Header />
+      <MainSection />
+      <ProjectSection />
+    </main>
+  );
 };
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["header", "main", "project"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default Home;
