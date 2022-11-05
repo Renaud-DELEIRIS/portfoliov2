@@ -30,7 +30,13 @@ const defaultProjects: Array<Project> = [
     category: "Front End",
     description:
       "Boheme is a web application that allows users to create and share their own stories. Users can create their own stories, and share them with the world. Users can also read stories created by other users. Boheme is a full-stack application built with React, Node, Express, and MongoDB.",
-    image: ["boheme1.png", "boheme2.png", "boheme3.png"],
+    image: [
+      "/images/boheme/slider1.png",
+      "/images/boheme/slider2.png",
+      "/images/boheme/slider3.png",
+      "/images/boheme/slider4.png",
+      "/images/boheme/slider5.png",
+    ],
     visited: false,
     stacks: [
       {
