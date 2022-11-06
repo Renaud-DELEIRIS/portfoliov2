@@ -17,7 +17,7 @@ export default function ProjectSection() {
             <span className="text-color">{t`description`}</span>
           </p>
         </h2>
-        <span className="absolute top-0 right-0 text-neutral-700 hidden xs:block text-[120px] md:text-[250px] opacity-60 select-none leading-none">
+        <span className="absolute top-0 right-0 dark:text-neutral-700 text-neutral-300 hidden xs:block text-[120px] md:text-[250px] opacity-60 select-none leading-none">
           Work
         </span>
       </div>

@@ -1,6 +1,7 @@
 import Header from "@components/navigation/Header";
 import MainSection from "@components/sections/MainSection";
 import ProjectSection from "@components/sections/ProjectSection";
+import WorkSection from "@components/sections/WorkSection";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React from "react";
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
       <Header />
       <MainSection />
       <ProjectSection />
+      <WorkSection />
     </main>
   );
 };
@@ -19,7 +21,12 @@ const Home: React.FC = () => {
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["header", "main", "project"])),
+      ...(await serverSideTranslations(locale, [
+        "header",
+        "main",
+        "project",
+        "timeline",
+      ])),
       // Will be passed to the page component as props
     },
   };

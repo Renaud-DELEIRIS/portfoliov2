@@ -1,0 +1,29 @@
+{
+    "title": "Timeline",
+    "description": "On peut voir ici comment ma carrière a évolué au fil des ans.",
+    "epitech": {
+        "title": "Epitech",
+        "description": "Epitech est une école française qui enseigne l'informatique. C'est une nouvelle façon d'apprendre, basée sur le projet et le travail en équipe",
+        "date": "2018"
+    },
+    "gencovery": {
+        "title": "Gencovery",
+        "description" : "Gencovery est une startup française qui a pour but d'aider les biocompagnies à trouver la meilleure solution pour leurs besoins. Elle vise à réduire le coût et le temps de la recherche",
+        "date": "2019"
+    },
+    "nftluck": {
+        "title": "NFTLuck",
+        "description" : "NFTLuck avait pour objectif d'être le premier casino NFT. C'est un projet qui n'a jamais vraiment décollé, mais j'ai beaucoup appris sur la blockchain et les NFT",
+        "date": "2020 - 2021"
+    },
+    "boheme": {
+        "title": "Boheme",
+        "description" : "Boheme est un projet scolaire qui vise à aider les gens à créer des road trips parfaits. C'est un projet full stack sur lequel j'ai travaillé avec 5 autres personnes. Il utilise l'intelligence artificielle pour créer le road trip parfait",
+        "date": "2021 - Present"
+    },
+    "ganister": {
+        "title": "Ganister",
+        "description" : "Ganister est la première plateforme d'innovation basée sur les graphes de gestions de cycle de vie d'un produit. J'ai commencé à travailler en tant que stagiaire et suis rapidement devenu un développeur à temps plein",
+        "date": "2021 - Present"
+    }
+}
