@@ -3,7 +3,7 @@ import React from "react";
 interface Notification {
   id?: string;
   title: string;
-  message: string;
+  message: string | React.ReactNode;
   type: "success" | "error" | "info";
   delay?: number;
 }
@@ -26,11 +26,9 @@ export const NotificationProvider: React.FC = ({ children }) => {
     const delay = notification.delay || 5000;
     setNotifications((prev) => [...prev, { ...notification, id, delay }]);
 
-    if (notification.delay) {
-      setTimeout(() => {
-        removeNotification(id);
-      }, notification.delay);
-    }
+    setTimeout(() => {
+      removeNotification(id);
+    }, delay);
   };
 
   const removeNotification = (id: string) => {
@@ -62,7 +60,7 @@ export const NotificationProvider: React.FC = ({ children }) => {
         {notifications.map((n) => (
           <div
             key={n.id}
-            className={`fixed bottom-0 right-0 bg-color-2 border-l-4 text-color-1 p-4 m-4 shadow-md ${getBackgroundColor(
+            className={`fixed z-40 bottom-0 right-0 bg-color-2 border-l-4 text-color-1 p-4 m-4 shadow-md ${getBackgroundColor(
               n.type
             )}`}
           >

@@ -63,12 +63,59 @@ export default function ContactSection() {
   const formRef = React.useRef<HTMLFormElement>(null);
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    addNotification({
-      title: "Success ❤️",
-      message: "Your message has been sent successfully",
-      type: "success",
-    });
-    return;
+    const elems: any = e.currentTarget.elements;
+    const data = {
+      name: elems.name.value,
+      email: elems.email.value,
+      message: elems.message.value,
+      subject: elems.subject.value,
+      company: elems.company.value,
+    };
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          formRef.current?.reset();
+          addNotification({
+            title: "Success ❤️",
+            message: "Your message has been sent successfully",
+            type: "success",
+          });
+        } else {
+          addNotification({
+            title: "Error 😢",
+            message: (
+              <span>
+                Something went wrong, please try again later!
+                <br /> Or you can contact me directly via email at:
+                <br />
+                renauddeleiris@gmail.com
+              </span>
+            ),
+            type: "error",
+          });
+        }
+      })
+      .catch((err) => {
+        console.log("Error: ", err);
+        addNotification({
+          title: "Error 😢",
+          message: (
+            <span>
+              Something went wrong, please try again later!
+              <br /> Or you can contact me directly via email at:
+              renauddeleiris@gmail.com
+            </span>
+          ),
+          type: "error",
+        });
+      });
   };
 
   return (
