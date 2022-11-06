@@ -1,4 +1,5 @@
 import Header from "@components/navigation/Header";
+import { NotificationProvider } from "@components/notifications";
 import "@styles/global.scss";
 import { initDarkMode } from "@utils/darkMode";
 import { initMouseTrails, removeMouseTrails } from "@utils/mouseTrails";
@@ -17,8 +18,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   }, []);
   return (
     <div className="min-w-full min-h-screen bg-color-3">
-      <Header />
-      <Component {...pageProps} />
+      <NotificationProvider>
+        <Header />
+        <Component {...pageProps} />
+      </NotificationProvider>
     </div>
   );
 }

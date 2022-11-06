@@ -1,4 +1,5 @@
 import Header from "@components/navigation/Header";
+import ContactSection from "@components/sections/ContactSection";
 import MainSection from "@components/sections/MainSection";
 import ProjectSection from "@components/sections/ProjectSection";
 import WorkSection from "@components/sections/WorkSection";
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <MainSection />
       <ProjectSection />
       <WorkSection />
+      <ContactSection />
     </main>
   );
 };
@@ -26,6 +28,7 @@ export async function getStaticProps({ locale }: any) {
         "main",
         "project",
         "timeline",
+        "contact",
       ])),
       // Will be passed to the page component as props
     },

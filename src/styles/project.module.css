@@ -10,3 +10,19 @@
   );
   border-image-slice: 1;
 }
+
+/* Create a breakpoint for 768px */
+@media (min-width: 768px) {
+  .wrappercond {
+    -webkit-border-start: 4px solid;
+    border-inline-start: 4px solid;
+    -webkit-border-before: 4px solid;
+    border-block-start: 4px solid;
+    border-image-source: radial-gradient(
+      circle at top left,
+      #eab308,
+      transparent 50%
+    );
+    border-image-slice: 1;
+  }
+}

@@ -3,10 +3,16 @@ import React from "react";
 interface Props {
   children: React.ReactNode;
   className?: string;
+  type?: "button" | "submit" | "reset";
   onClick?: () => void;
 }
 
-export default function Button({ children, className = "", onClick }: Props) {
+export default function Button({
+  children,
+  className = "",
+  onClick,
+  type = "button",
+}: Props) {
   return (
     <button
       className={`
@@ -15,6 +21,7 @@ export default function Button({ children, className = "", onClick }: Props) {
 
     `}
       onClick={onClick}
+      type={type}
     >
       {children}
     </button>

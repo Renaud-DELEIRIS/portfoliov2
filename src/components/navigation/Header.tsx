@@ -28,19 +28,19 @@ const Header = () => {
       </div>
       <div className="row items-center gap-4 hidden sm:flex">
         <a
-          href="#projects"
+          href="#project"
           className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
         >
           {t`project`}
         </a>
         <a
-          href="#projects"
+          href="#work"
           className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
         >
           {t`work`}
         </a>
         <a
-          href="#projects"
+          href="#contact"
           className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
         >
           {t`contact`}

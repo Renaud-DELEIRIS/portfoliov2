@@ -31,6 +31,7 @@ export default function MainSection() {
     <section
       className="w-full h-screen pt-[calc(80px+15vh)] py-8 relative overflow-x-hidden"
       ref={ref}
+      id="main"
     >
       <div className="row px-4 relative md:px-12 z-10">
         <h1 className="col text-4xl md:text-6xl font-bold text-color-1">
