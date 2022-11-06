@@ -138,14 +138,14 @@ export default function ContactSection() {
             <TextInput
               name="name"
               type="text"
-              placeholder={"Name"}
+              placeholder={"Name *"}
               className="w-1/2"
               error={true}
             />
             <TextInput
               name="email"
               type="email"
-              placeholder={"Email"}
+              placeholder={"Email *"}
               className="w-1/2"
             />
           </div>
@@ -159,10 +159,14 @@ export default function ContactSection() {
           <TextInput
             name="subject"
             type="text"
-            placeholder={"Subject"}
+            placeholder={"Subject *"}
             className="w-full"
           />
-          <TextArea name="message" placeholder={"Message"} className="w-full" />
+          <TextArea
+            name="message"
+            placeholder={"Message *"}
+            className="w-full"
+          />
           <Button type="submit" className="w-1/2 self-end">
             Send
           </Button>
