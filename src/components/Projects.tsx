@@ -1,4 +1,5 @@
 import style from "@styles/project.module.css";
+import { useTranslation } from "next-i18next";
 import React, { useEffect } from "react";
 import ImageGallery from "react-image-gallery";
 import defaultProjects from "src/constant/project";
@@ -9,6 +10,7 @@ export default function Projects() {
   const [projects, setProjects] = React.useState(defaultProjects);
   const [activeProject, setActiveProject] = React.useState(0);
   const [openModal, setOpenModal] = React.useState(false);
+  const { t } = useTranslation("project");
   useEffect(() => {
     // Set projects[active].visited to true
     const newProjects = [...projects];
@@ -29,10 +31,10 @@ export default function Projects() {
           {projects[activeProject].category}
         </h3>
         <h4 className="text-3xl text-color mt-2 sm:mt-4">
-          {projects[activeProject].name}
+          {t(projects[activeProject].name)}
         </h4>
         <p className="text-sm sm:text-base  text-color mt-1 sm:mt-2">
-          {projects[activeProject].description}
+          {t(projects[activeProject].description)}
         </p>
         <div className="row gap-8 mt-4 hidden xs:flex flex-1">
           <div className="col items-center">
@@ -50,7 +52,7 @@ export default function Projects() {
                 <Button
                   onClick={() => openSite(projects[activeProject].link ?? "")}
                 >
-                  Visit Website
+                  {t`visit`}
                 </Button>
               </div>
             )}
@@ -71,7 +73,7 @@ export default function Projects() {
           </div>
         </div>
         <div className="w-full xs:hidden mt-auto flex justify-end pt-8">
-          <Button onClick={() => setOpenModal(true)}>See more!</Button>
+          <Button onClick={() => setOpenModal(true)}>{t`more`}!</Button>
         </div>
       </div>
       <div className="col w-1/5 lg:w-[13%] md:w-[17%] xl:w-1/12">
@@ -85,7 +87,7 @@ export default function Projects() {
               onClick={() => setActiveProject(index)}
             >
               <h4 className="text-primary-3 group-hover:scale-110 duration-200">
-                {project.name}
+                {t(project.name)}
               </h4>
               {!project.visited && (
                 <span className="absolute flex h-3 w-3 -top-1 -right-1">

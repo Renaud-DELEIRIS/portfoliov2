@@ -12,7 +12,7 @@ export default function Timeline() {
   const { t } = useTranslation("timeline");
   return (
     <div className="w-full row relative items-center">
-      <div className="p-4 w-full col md:row md:min-h-[450px] gap-8 md:gap-0">
+      <div className="md:px-4 py-4 w-full col md:row md:min-h-[450px] gap-8 md:gap-0">
         {works.map((work, index) => (
           <div
             key={index}
@@ -41,7 +41,7 @@ export default function Timeline() {
                 className={`text-neutral-100 dark:text-neutral-800 font-bold capitalize text-center w-full h-12 border ${
                   index % 2 ? "rounded-t-full" : "rounded-b-full"
                 } dark:border-neutral-800 flex items-center justify-center min-h-[48px]`}
-                style={{ backgroundColor: generateColor(index, false) }}
+                style={{ backgroundColor: generateColor(index) }}
               >
                 {t(work.title)}
               </h6>
@@ -50,17 +50,21 @@ export default function Timeline() {
               </p>
             </div>
             <div
-              className={`px-2 row w-1/2 md:hidden items-center ${
+              className={`row w-1/2 md:hidden items-center ${
                 index % 2 ? "" : "flex-row-reverse"
               }`}
             >
               <div
-                className="p-2 col gap-1"
+                className={`p-2 col gap-1 ${
+                  index % 2 ? "rounded-r-lg" : "rounded-l-lg"
+                }`}
                 style={{
                   backgroundColor: generateColor(index),
                 }}
               >
-                <h6 className="font-bold text-color-1">{t(work.title)}</h6>
+                <h6 className="font-bold text-color-1 text-lg">
+                  {t(work.title)}
+                </h6>
                 <h6 className="font-bold text-color-1 text-sm">
                   {t(work.date)}
                 </h6>
@@ -70,6 +74,13 @@ export default function Timeline() {
                   </span>
                 </p>
               </div>
+            </div>
+            <div
+              className={`px-2 row w-1/2 md:hidden items-center justify-center ${
+                index % 2 ? "" : "flex-row-reverse"
+              }`}
+            >
+              <img src={work.icon} alt={work.title} className="w-20 h-20 col" />
             </div>
           </div>
         ))}

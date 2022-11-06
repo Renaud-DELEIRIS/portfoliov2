@@ -27,10 +27,9 @@ interface Project {
 
 const defaultProjects: Array<Project> = [
   {
-    name: "Boheme",
+    name: "boheme.title",
     category: "Front End",
-    description:
-      "Boheme is a web application that allows users to create and share their own stories. Users can create their own stories, and share them with the world. Users can also read stories created by other users. Boheme is a full-stack application built with React, Node, Express, and MongoDB.",
+    description: "boheme.description",
     image: [
       "/images/boheme/slider1.png",
       "/images/boheme/slider2.png",
@@ -58,10 +57,9 @@ const defaultProjects: Array<Project> = [
     ],
   },
   {
-    name: "urChunk",
+    name: "urchunk.title",
     category: "Front End",
-    description:
-      "Boheme is a web application that allows users to create and share their own stories. Users can create their own stories, and share them with the world. Users can also read stories created by other users. Boheme is a full-stack application built with React, Node, Express, and MongoDB.",
+    description: "urchunk.description",
     image: [
       "/images/urchunk/slider1.png",
       "/images/urchunk/slider2.png",
@@ -96,10 +94,9 @@ const defaultProjects: Array<Project> = [
     link: "https://urchunk.com",
   },
   {
-    name: "NFT Luck",
+    name: "nftluck.title",
     category: "Full Stack",
-    description:
-      "Boheme is a web application that allows users to create and share their own stories. Users can create their own stories, and share them with the world. Users can also read stories created by other users. Boheme is a full-stack application built with React, Node, Express, and MongoDB.",
+    description: "nftluck.description",
     image: [
       "/images/nftluck/slider1.jpeg",
       "/images/nftluck/slider2.png",

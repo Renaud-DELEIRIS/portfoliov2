@@ -1,4 +1,18 @@
 {
     "title": "Mes Projets",
-    "description": "Voici quelqu'un des plus gros projets sur lesquels j'ai eu la chance de travailler"
+    "description": "Voici quelqu'un des plus gros projets sur lesquels j'ai eu la chance de travailler",
+    "visite": "Visiter le site",
+    "more": "En savoir plus",
+    "boheme": {
+        "title": "Bohème",
+        "description" : "Boheme est un projet scolaire qui vise à améliorer l'expérience des travaler en leur fournissant des outils. Il s'agit d'une application web qui permet aux utilisateurs de créer un voyage, d'ajouter des activités et des lieux à visiter, et de le partager avec d'autres personnes. Elle permet également aux utilisateurs de créer un budget et de le gérer pendant le voyage. L'application est construite avec Vue3, Nuxt3, Django et l'API Google Maps."
+    },
+    "nftluck": {
+        "title": "NFTLuck",
+        "description" : "NFTLuck avait pour objectif d'être le premier casino NFT. Il permet aux utilisateurs de jouer à des jeux de casino en couvertissant la valeurs de leur NFT en jettons. Ensuite l'utilisateur peut retirer ses jetons et les échanger contre des NFT. L'application est construite avec React, Next, Express et MongoDB."
+    },
+    "urchunk": {
+        "title": "UrChunk",
+        "description" : "UrChunk est une application web qui permet aux utilisateurs de créer un chunk de texte et de le partager avec d'autres personnes. Elle peut être considérée comme un enfant entre deux célèbres plateformes de médias sociaux : Twitter et Reddit. Elle vise à être un lieu où les amateurs de crypto-monnaies peuvent partager leurs pensées et leurs idées. L'application est construite avec React, Next et Django"
+    }
 }
