@@ -1,4 +1,5 @@
 import Button from "@components/Button";
+import { IconX } from "@tabler/icons";
 import React from "react";
 import ReactDOM from "react-dom";
 import ImageGallery from "react-image-gallery";
@@ -34,7 +35,7 @@ export default function ProjectModal({ open, onClose, project }: Props) {
         "bg-color-1 shadow absolute focus:outline-none rounded-md border"
       }
     >
-      <div className="col gap-8 mt-4 flex p-4">
+      <div className="col gap-8 mt-4 flex p-4 relative">
         <div className="col items-center">
           <h5 className="mb-2 text-primary-1 text-lg self-start">Stacks:</h5>
           <ul className="col gap-1">
@@ -60,6 +61,10 @@ export default function ProjectModal({ open, onClose, project }: Props) {
             autoPlay
           />
         </div>
+        <IconX
+          onClick={onClose}
+          className="cursor-pointer text-primary-1 absolute -top-2 right-4"
+        ></IconX>
       </div>
     </Modal>
   );
