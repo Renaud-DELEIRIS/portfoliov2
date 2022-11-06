@@ -3,10 +3,12 @@ import React, { useEffect } from "react";
 import ImageGallery from "react-image-gallery";
 import defaultProjects from "src/constant/project";
 import Button from "./Button";
+import ProjectModal from "./modal/ProjectModal";
 
 export default function Projects() {
   const [projects, setProjects] = React.useState(defaultProjects);
   const [activeProject, setActiveProject] = React.useState(0);
+  const [openModal, setOpenModal] = React.useState(false);
   useEffect(() => {
     // Set projects[active].visited to true
     const newProjects = [...projects];
@@ -68,8 +70,8 @@ export default function Projects() {
             />
           </div>
         </div>
-        <div className="w-full xs:hidden mt-auto flex justify-end">
-          <Button onClick={() => {}}>See more!</Button>
+        <div className="w-full xs:hidden mt-auto flex justify-end pt-8">
+          <Button onClick={() => setOpenModal(true)}>See more!</Button>
         </div>
       </div>
       <div className="col w-1/5 lg:w-[13%] md:w-[17%] xl:w-1/12">
@@ -95,6 +97,11 @@ export default function Projects() {
           );
         })}
       </div>
+      <ProjectModal
+        onClose={() => setOpenModal(false)}
+        open={openModal}
+        project={projects[activeProject]}
+      />
     </div>
   );
 }

@@ -11,12 +11,15 @@ export default function ProjectSection() {
   return (
     <section className="w-full pb-8 pt-24 relative overflow-x-hidden">
       <div className="row px-4 relative md:px-12 ">
-        <h2 className="col text-4xl md:text-6xl font-bold text-color-1">
+        <h2 className="col text-4xl md:text-6xl font-bold text-color-1 z-[2]">
           <span className="text-primary-1">{t`title`},</span>
           <p className="text-base mt-8 font-normal pl-4">
             <span className="text-color">{t`description`}</span>
           </p>
         </h2>
+        <span className="absolute top-0 right-0 text-neutral-700 hidden xs:block text-[120px] md:text-[250px] opacity-60 select-none leading-none">
+          Work
+        </span>
       </div>
       <div className="row px-4 relative md:px-12 pt-8">
         <Projects />

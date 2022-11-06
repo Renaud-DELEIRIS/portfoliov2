@@ -8,7 +8,7 @@ import React from "react";
 const Home: React.FC = () => {
   const { t } = useTranslation("common");
   return (
-    <main className="bg-color-1 transition-colors duration-500">
+    <main className="bg-color-1 transition-colors duration-500 -z-10">
       <Header />
       <MainSection />
       <ProjectSection />

@@ -6,7 +6,10 @@ import { appWithTranslation } from "next-i18next";
 import { AppProps } from "next/app";
 import React, { useEffect } from "react";
 import "react-image-gallery/styles/scss/image-gallery.scss";
+import Modal from "react-modal";
 import "tailwindcss/tailwind.css";
+
+Modal.setAppElement("#__next");
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {

@@ -21,10 +21,10 @@ export default function MainSection() {
       }
     }
     initMouseTrails(ref.current);
-    initStars(ref.current);
+    // initStars(ref.current);
     return () => {
       removeMouseTrails(ref.current);
-      destroyStars(ref.current);
+      // destroyStars(ref.current);
     };
   }, [ref]);
   return (

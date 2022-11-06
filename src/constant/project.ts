@@ -9,6 +9,7 @@ import {
   IconWorld,
   TablerIcon,
 } from "@tabler/icons";
+import { type } from "os";
 import { FunctionComponent } from "react";
 
 interface Project {
@@ -35,7 +36,6 @@ const defaultProjects: Array<Project> = [
       "/images/boheme/slider2.png",
       "/images/boheme/slider3.png",
       "/images/boheme/slider4.png",
-      "/images/boheme/slider5.png",
     ],
     visited: false,
     stacks: [
@@ -134,3 +134,5 @@ const defaultProjects: Array<Project> = [
 ];
 
 export default defaultProjects;
+
+export type { Project };
