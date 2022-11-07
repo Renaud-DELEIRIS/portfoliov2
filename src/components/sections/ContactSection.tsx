@@ -119,7 +119,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="w-full pt-24 relative overflow-x-hidden">
+    <section
+      id="contact"
+      className="w-full pt-24 pb-8 relative overflow-x-hidden"
+    >
       <div className="row px-4 relative md:px-12 mb-8">
         <h2 className="col text-4xl md:text-6xl font-bold text-color-1 z-[2]">
           <span className="text-primary-1">{t`title`},</span>
