@@ -1,4 +1,5 @@
 import Button from "@components/Button";
+import Cardgame from "@components/game";
 import { useNotification } from "@components/notifications";
 import Timeline from "@components/timeline/Timeline";
 import style from "@styles/contact.module.css";
@@ -131,7 +132,7 @@ export default function ContactSection() {
           </p>
         </h2>
       </div>
-      <div className="row px-4 relative md:px-12 items-center justify-around w-full">
+      <div className="row px-4 relative items-center justify-around w-full gap-4">
         <form
           ref={formRef}
           onSubmit={onSubmit}
@@ -174,11 +175,9 @@ export default function ContactSection() {
             Send
           </Button>
         </form>
-        <img
-          src="/images/r.gif"
-          alt="R"
-          className="w-1/2 hidden md:block z-10"
-        />
+        <div className="w-1/2 hidden md:block z-10">
+          <Cardgame />
+        </div>
       </div>
       <span className="absolute top-28 right-0 dark:text-neutral-700 text-neutral-300 hidden xs:block text-[180px] md:text-[250px] lg:text-[350px] opacity-60 select-none leading-none">
         @

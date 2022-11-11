@@ -1,0 +1,46 @@
+.card {
+  text-align: center;
+  perspective: 600px;
+  aspect-ratio: 1/1;
+}
+.card-content {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+.card.flipped .card-content {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.win {
+  -webkit-animation: jump 1s ease-in-out;
+  animation: jump 1s ease-in-out;
+}
+@keyframes jump {
+  0% {
+    translate: 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+  100% {
+    translate: 0;
+  }
+}
