@@ -25,10 +25,10 @@ export default function Cardgame() {
       }
     }
     // Shuffle the cards
-    // for (let i = newCards.length - 1; i > 0; i--) {
-    //   const j = Math.floor(Math.random() * (i + 1));
-    //   [newCards[i], newCards[j]] = [newCards[j], newCards[i]];
-    // }
+    for (let i = newCards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newCards[i], newCards[j]] = [newCards[j], newCards[i]];
+    }
     setCards(newCards);
     console.log(newCards);
   };
