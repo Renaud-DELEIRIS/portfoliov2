@@ -15,8 +15,8 @@ Modal.setAppElement("#__next");
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
     initDarkMode();
-    // const body = document.querySelector("body");
-    // body?.classList.add("bg-color-3");
+    const body = document.querySelector("body");
+    body?.classList.add("bg-color-3");
   }, []);
   return (
     <div className="min-w-full min-h-screen bg-color-3">
