@@ -29,7 +29,7 @@ export default function MainSection() {
   }, [ref]);
   return (
     <section
-      className="w-full h-screen pt-[calc(80px+15vh)] py-8 relative overflow-x-hidden"
+      className="w-full min-h-screen pt-[calc(80px+15vh)] py-8 relative overflow-x-hidden"
       ref={ref}
       id="main"
     >

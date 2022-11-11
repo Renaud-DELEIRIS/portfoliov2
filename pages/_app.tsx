@@ -16,10 +16,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
     initDarkMode();
     const body = document.querySelector("body");
-    body?.classList.add("bg-color-3");
+    body?.classList.add("bg-color-1");
   }, []);
   return (
-    <div className="min-w-full min-h-screen bg-color-3">
+    <div className="min-w-full min-h-screen bg-color-1">
       <NotificationProvider>
         <Header />
         <Component {...pageProps} />
