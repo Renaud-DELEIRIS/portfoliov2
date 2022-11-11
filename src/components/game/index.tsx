@@ -1,4 +1,5 @@
 import Button from "@components/Button";
+import { useTranslation } from "next-i18next";
 import React from "react";
 import DisplayGame from "./DisplayGame";
 import GameProvider, { Card } from "./ProviderGame";
@@ -11,6 +12,7 @@ export default function Cardgame() {
   const [lastCard, setLastCard] = React.useState<number | null>(null);
   const [matched, setMatched] = React.useState<number>(0);
   const timer = React.useRef<NodeJS.Timeout | null>(null);
+  const { t } = useTranslation("game");
 
   const fillCards = () => {
     const newCards = [];
@@ -30,7 +32,6 @@ export default function Cardgame() {
       [newCards[i], newCards[j]] = [newCards[j], newCards[i]];
     }
     setCards(newCards);
-    console.log(newCards);
   };
 
   const clickCards = (index: number) => {
@@ -117,10 +118,14 @@ export default function Cardgame() {
   return (
     <GameProvider cards={cards} attempt={attempt} clickCard={clickCards}>
       <div className="flex flex-col bg-color-3 p-4 gap-2">
-        <h5 className="font-bold text-xl text-color-1">Crack the pairs 🤔</h5>
+        <h5 className="font-bold text-xl text-color-1">{t`name`}</h5>
         <div className="grid grid-cols-2">
-          <div className="text-color-1">Attempts: {attempt}</div>
-          <div className="text-color-1">Matched: {matched}</div>
+          <div className="text-color-1">
+            {t`attempts`}: {attempt}
+          </div>
+          <div className="text-color-1">
+            {t`matched`}: {matched}
+          </div>
         </div>
         <div className="w-full mb-1 relative">
           <span
@@ -140,7 +145,7 @@ export default function Cardgame() {
           </div>
         </div>
         <DisplayGame />
-        <Button onClick={resetGame}>Reset</Button>
+        <Button onClick={resetGame}>{t`reset`}</Button>
       </div>
     </GameProvider>
   );

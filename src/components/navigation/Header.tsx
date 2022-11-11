@@ -26,22 +26,28 @@ const Header = () => {
           <span className="text-sm text-gray italic whitespace-nowrap">{t`description`}</span>
         </div>
       </div>
-      <div className="row items-center gap-4 hidden sm:flex">
+      <div className="row items-center gap-4 hidden md:flex">
         <a
           href="#project"
-          className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
+          className="text-color-1 text-xl font-bold after:bg-color-1-invert"
         >
           {t`project`}
         </a>
         <a
+          href="#skill"
+          className="text-color-1 text-xl font-bold after:bg-color-1-invert"
+        >
+          {t`skills`}
+        </a>
+        <a
           href="#work"
-          className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
+          className="text-color-1 text-xl font-bold after:bg-color-1-invert"
         >
           {t`work`}
         </a>
         <a
           href="#contact"
-          className="text-color-1 text-2xl font-bold after:bg-color-1-invert"
+          className="text-color-1 text-xl font-bold after:bg-color-1-invert"
         >
           {t`contact`}
         </a>

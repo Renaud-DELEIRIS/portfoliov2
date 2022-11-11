@@ -8,7 +8,10 @@ export default function DisplayGame() {
   return (
     <div className="grid grid-cols-4 gap-3 xl:grid-cols-8">
       {cards.map((card, index) => (
-        <div className={`${style.card} ${card.flipped ? style.flipped : ""}`}>
+        <div
+          key={index}
+          className={`${style.card} ${card.flipped ? style.flipped : ""}`}
+        >
           <div className={`${style["card-content"]}`}>
             <div
               className={`${style["card-front"]} text-color-1 bg-color-2 hover:bg-neutral-100 dark:hover:bg-black hover:text-yellow-500 cursor-pointer`}
