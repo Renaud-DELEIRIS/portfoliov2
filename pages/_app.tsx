@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <div className="min-w-full min-h-screen bg-color-1">
       <NotificationProvider>
-        <Header />
         <Component {...pageProps} />
       </NotificationProvider>
     </div>
