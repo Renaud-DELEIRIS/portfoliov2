@@ -5,7 +5,7 @@
     "more": "En savoir plus",
     "boheme": {
         "title": "Bohème",
-        "description" : "Boheme est un projet scolaire qui vise à améliorer l'expérience des travaler en leur fournissant des outils. Il s'agit d'une application web qui permet aux utilisateurs de créer un voyage, d'ajouter des activités et des lieux à visiter, et de le partager avec d'autres personnes. Elle permet également aux utilisateurs de créer un budget et de le gérer pendant le voyage. L'application est construite avec Vue3, Nuxt3, Django et l'API Google Maps."
+        "description" : "Boheme est un projet scolaire qui vise à améliorer l'expérience des voyageurs en leur fournissant des outils. Il s'agit d'une application web qui permet aux utilisateurs de créer un voyage, d'ajouter des activités et des lieux à visiter, et de le partager avec d'autres personnes. Elle permet également aux utilisateurs de créer un budget et de le gérer pendant le voyage. L'application est construite avec Vue3, Nuxt3, Django"
     },
     "nftluck": {
         "title": "NFTLuck",

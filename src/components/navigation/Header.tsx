@@ -8,8 +8,7 @@ import {
 } from "@tabler/icons";
 import { isDarkMode, toggleDarkMode } from "@utils/darkMode";
 import { initMouseTrails, removeMouseTrails } from "@utils/mouseTrails";
-import { TFunction, useTranslation } from "next-i18next";
-import Link from "next/link";
+import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
@@ -54,16 +53,20 @@ const Header = () => {
       </div>
       <div className="ml-auto">
         <div className="row gap-1 text-xl items-center ">
-          <Link href="#" locale="en">
-            <span className="duration-100 hover:scale-110 cursor-pointer">
-              🇺🇸
-            </span>
-          </Link>
-          <Link href="#" locale="fr">
-            <span className="duration-100 hover:scale-110 cursor-pointer">
-              🇫🇷
-            </span>
-          </Link>
+          <span
+            title={t`language.en`}
+            className="duration-100 hover:scale-110 cursor-pointer"
+            onClick={() => router.push("", "", { locale: "en" })}
+          >
+            🇺🇸
+          </span>
+          <span
+            title={t`language.fr`}
+            className="duration-100 hover:scale-110 cursor-pointer"
+            onClick={() => router.push("", "", { locale: "fr" })}
+          >
+            🇫🇷
+          </span>
           <div
             onClick={toggleDarkMode}
             className="ml-1 p-2 rounded-full text-color-1 hover:bg-gray-400/80 dark:hover:bg-gray-600/80"
